@@ -248,6 +248,7 @@ class complex:
          return complex(self.real-other.real,self.imag-other.real)
       def multiply(self,other):  
          real_part=(self.real*other.real+self.imag*other.real)
+
         
       
 
