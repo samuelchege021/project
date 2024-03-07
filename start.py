@@ -23,7 +23,7 @@ def greet(name='world'):
     greet ("alice")
 
 
-    class MyClass:
+class MyClass:
         
         def __init__(self, name='World'):
          self.name = name
@@ -33,7 +33,7 @@ def greet(name='world'):
 
 
 
-print(greet)
+
 
 def fib(n): #write fibonacci series up to n
     "print a Fibonacci series up to n"
@@ -44,7 +44,7 @@ def fib(n): #write fibonacci series up to n
 
 
 
-    def ask_ok(prompt,retries=4,remimder='pleasetry again'):
+def ask_ok(prompt,retries=4,remimder='pleasetry again'):
         while True:
            ok=input(prompt)
            if ok in ('y','ye','yes'):
@@ -55,62 +55,62 @@ def fib(n): #write fibonacci series up to n
            if retries<0:
                raise ValueError('invalid user response')
                print(reminder)
-def my_list():
+# def my_list():
         
- my_list=[1,2,3]
- my_list.append(4)
-print(my_list) # output[1,2,3,4]
+#  my_list=[1,2,3]
+#  my_list.append(4)
+# print(my_list) # output[1,2,3,4]
 
 
-my_list=[1,2,3]
-my-list.extend([4,5.6])
-print(my_list) #output:[1,4,2,3]
+# my_list=[1,2,3]
+# my_list.extend([4,5.6])
+# print(my_list) #output:[1,4,2,3]
 
-my_list[1,2,3]
-my_list.insert(1,4)
-print(my_list)  # output:[1,4,2.3]
+# my_list(1,2,3)
+# my_list.insert(1,4)
+# print(my_list)  # output:[1,4,2.3]
 
-my_list=[1,2,3]
-removed_item=my_list.pop(1)
+# my_list=[1,2,3]
+# removed_item=my_list.pop(1)
 
-print(my_list) #output:[1,3]
-print(removed_item) #output:2
+# print(my_list) #output:[1,3]
+# print(removed_item) #output:2
 
-my_list=[1,2,3]
-my_list.clear()
-print(my_list) #output:[]
+# my_list=[1,2,3]
+# my_list.clear()
+# print(my_list) #output:[]
 
-my_list=[1,2,3,2]
-index=my_list.index(2)
-print(index) #output:1
+# my_list=[1,2,3,2]
+# index=my_list.index(2)
+# print(index) #output:1
 
-my_list=[1,2,3,2,2]
-count=my_list.count(2)
-print(count) #output:3
+# my_list=[1,2,3,2,2]
+# count=my_list.count(2)
+# print(count) #output:3
 
-my_list=[3,1,2]
-my_list.sort()
-print(my_list) #output:[1,2,3]\
+# my_list=[3,1,2]
+# my_list.sort()
+# print(my_list) #output:[1,2,3]\
 
-my_list=[1,2,3]
-my_list.reverse()
-print(my_list) #output :[3,2,1]
+# my_list=[1,2,3]
+# my_list.reverse()
+# print(my_list) #output :[3,2,1]
 
-my_list=[1,2,3]
-copied_list=my_list.copy
-print(copied_list) #output :[1,2,3]
+# my_list=[1,2,3]
+# copied_list=my_list.copy
+# print(copied_list) #output :[1,2,3]
 
 
 
 #list as stacks
-stack=[3,4,5]
-stack.append(6)
-stack.apppend(7)
+# stack=[3,4,5]
+# stack.append(6)
+# stack.apppend(7)
 
-print(stack)
+# print(stack)
 
-stack.pop()
-stack.pop()
+# stack.pop()
+# stack.pop()
 
 
 #Queues
@@ -144,23 +144,22 @@ for x in range (10):
 
 
             #sets
-            def basket (fruits):
-               
-             baskets={"apple",'orange',"apple",'pear','orange','banana'}
+   def basket (fruits):
+               baskets={"apple",'orange',"apple",'pear','orange','banana'}
 
-            for fruit in fruits :
-               print ()
+               for fruit in baskets :
+                print ()
                if fruit== 'orange':
-                  
-                  print('found my orange')
+                
+                print('found my orange')
                else:
-                  print('this is not a orange')
+                print('this is not a orange')
 
 
 
-                  basket= {'apple','orange','apple','pear','orange','banana'}
-                  print(basket)
-               
+                basket= {'apple','orange','apple','pear','orange','banana'}
+                print(basket)
+            
 
 
         #dictionaries
@@ -188,7 +187,7 @@ def contacts ():
 #printing all contacts
 
 for name,email in contacts.items():
-   print(f,"{name} : {email}")
+   print(f"{name} : {email}")
 
 
 
@@ -211,28 +210,7 @@ for word in word :
 
 #method attribute.
       
-class myclass:
-   def _init_(self,value):
-      self.value=value
 
-      def my_method(self):
-         return f"value is {self.name}"
-      
-      obj=myclass(10)
-      #accesing method attribute
-
-      print(obj.my_method)
-
-      #dynamic method.
-
-      class myclass:
-         def __init__(self) -> None:
-            pass
-         
-      obj= myclass()
-
-      obj.new.attribute=42
-      print(obj.new.attribute)
 
          
 
@@ -241,15 +219,42 @@ class complex:
       self.real=real
       self.imag=imag
 
-      def add(self,other):
+   def add(self,other):
          return complex(self.real+other.real,self.imag+other.real)
       
-      def subtract(self,other):
+   def subtract(self,other):
          return complex(self.real-other.real,self.imag-other.real)
-      def multiply(self,other):  
-         real_part=(self.real*other.real+self.imag*other.real)
+   def multiply(self,other):  
+         real_part=(self.real*other.real-self.imag*other.real)
+         imag_part=(self.real*other.real+self.real*other.real)
+         return complex(real_part,imag_part)
+   
+   def divide (self,other):
+       denominator=other.real**2+other.imag**2
+       real_part=(self.real*other.real+self.imag*other.imag)/denominator
+       imag_part=(self.real*other.real-self.imag*other.real)/denominator
+       return complex(real_part,imag_part)
+   
+   def get_real_part(self):
+       return(self.real)
+   def get_imag_part(self):
+       return (self.imag)
+   
+   def __str__(self) :
+      return f"{self.real} + {self.imag}i"
+   
+   #example usage
+   c1=complex(3,2)
+   c2=complex(1,5)
 
-        
+   #addition
+
+   result_addition=c1.add(c2)
+   print("Addition:",result_addition)
+
+
+
+      
       
 
 
